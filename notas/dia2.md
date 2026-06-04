@@ -487,3 +487,30 @@ Una prueba será, que si al tio le ha tocado la loteria, le salga un mensaje en 
 
 UFT tiene soporte integrado directao nativo para lenguaje GHERKIN y CUCUMBER...
 Pero en la extensión de desarrolladores.
+
+
+
+---
+
+
+Vamos a tener una solución con muchos tests
+Cada test tendrá su propio archivo de acciones.
+Tendremos luego subrutinas comunes que querremos reusar... esas no van definidas dentro de los archivos del test.
+Van definidas en archivos independientes a nivel de la solución.
+
+El problema a la hora de determinar si todas las subrutionas las meto en un fichero o en varios viene marcado por otra cosa.
+
+Es vuestro caso, usais ALM como gestor de versiones!
+
+ALM lleva integrado un gestor de versiones propio... que opera bajo las formas de hace 20 años!
+Todo esto es muy legacy!
+El sistema de versionado de ALM es similar en concepción / uso a cvs, svn
+
+Son sistemas que funcionan FATAL!
+Hoy en día TODA LA INDUSTRIA se han movido a GIT
+
+Qué implica eso?
+Cuando quiero editar un test... tengo que SACARLO DEL SISTEMA DE CONTROL DE VERSIONES (checkout)
+Y entras yo tengo ese CHECKOUT (QUE HACE UN BLOQUEO A NIVEL DEL SERVIDOR) nadie puede tocar esos archivos.
+
+Si meto todas las funciones en un archivo... Y alguien tiene que tocar una...JODIDO VOY... bloquea el archivo y nadie más puede meter nada mientras no lo suelte... Que muchas veces se me olvida el soltarlo... Y hasta que no me acuerde.. o me tiren de las orejas... nadie puede tocar nada!
