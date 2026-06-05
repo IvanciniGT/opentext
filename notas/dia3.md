@@ -68,11 +68,17 @@ text() Me devuelve el texto de un elemento
 contains(texto, trozo)  Me devuelve si el texto contiene el trozo
 
 text-danger
-//*[@id="login"]//*[contains(text(), "failed") or contains(class, "danger")]
+//*[@id="login"]//*[contains(text(), "failed") or contains(@class, "danger")]
 
-
+1º Le doy el HTML
+2º Le doy el cómo quiero identificarlo:
+    Dentro del elemento que tiene como id= login, busca si hay algo que tenga en su texto la palabra failed o que tenga en su estilo la palabra danger.
 
 //div[@id="login"]/DIV[1]/DIV[1]/DIV[1]/P[2]
-/html/body/section/div/div/div[1]/p[2]
 
+/html/body/section/div/div/div[1]/p[2]
 //*[@id="login"]/div/div/div[1]/p[2]
+
+
+
+---
